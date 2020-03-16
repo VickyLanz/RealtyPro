@@ -1,0 +1,24 @@
+﻿@model IEnumerable<VigneshProject.Models.PropertyType>
+
+@{
+    ViewBag.Title = "Action";
+}
+
+<h2>Action</h2>
+
+<div>
+    <h4>PropertyType</h4>
+    <hr />
+    @foreach (var item in Model)
+    {
+
+           <br />
+
+            @Html.DisplayFor(model => item.PropType)<br /><br /><br />
+        @Html.ActionLink("Explore","ViewProperty","User",new { id = item.PropType.ToString() },null)<br />
+    }
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.TypeID }) |
+    @Html.ActionLink("Back to List", "Index")*@
+</p>

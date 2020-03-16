@@ -1,0 +1,88 @@
+﻿@model VigneshProject.Models.Property
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PropName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropOwnerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropOwnerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

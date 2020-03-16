@@ -1,0 +1,90 @@
+﻿@using VigneshProject.Models;
+@model IEnumerable<Property>
+
+@{
+    ViewBag.Title = "ViewProperty";
+}
+
+<h2>ViewProperty</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (Property item in @Model)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.PropName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PropName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.Location)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropOwnerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PropOwnerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PropDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PropType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PhoneNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropImage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.PropImage)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.UserID)
+            </dd>
+            <br />
+            <br />
+            <br />
+
+        }
+    </dl>
+       
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = ite.PropID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

@@ -1,0 +1,82 @@
+﻿@model VigneshProject.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PropName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropOwnerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropOwnerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PropID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
