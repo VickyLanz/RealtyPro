@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,11 +11,32 @@ namespace VigneshProject.Controllers
     public class RolesController : Controller
     {
         // GET: Roles
-        ApplicationDbContext db = new ApplicationDbContext();
-       
+        ApplicationDbContext context;
+        public RolesController()
+        {
+
+            context = new ApplicationDbContext();
+        }
+
         public ActionResult Index()
         {
-            //db.Roles.
+            var Roles = context.Roles.ToList();
+            return View(Roles);
+        }
+        public ActionResult Create()
+        {
+            var Roles = new IdentityRole();
+            return View(Roles);
+        }
+        [HttpPost]
+        public ActionResult Create(IdentityRole Role)
+        {
+            context.Roles.Add(Role);
+            context.SaveChanges();
+            return RedirectToAction("Index", "Role");
+        }
+        public ActionResult AssignRoleToUser()
+        {
             return View();
         }
     }
