@@ -14,7 +14,7 @@ namespace VigneshProject.Controllers
         
         public ActionResult Index()
         {
-          Session["User_Id"]=  User.Identity.GetUserId();
+         // Session["User_Id"]=  User.Identity.GetUserId();
            
             return View();
         }

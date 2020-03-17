@@ -67,7 +67,7 @@ namespace VigneshProject.Controllers
                 property.PropImage = path;
                 db.Properties.Add(property);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Properties");
             }
             else
             {
